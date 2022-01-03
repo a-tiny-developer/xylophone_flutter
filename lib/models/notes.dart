@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/widgets.dart';
 
 class Notes {
   static final List<_Note> notes = [
@@ -10,6 +11,17 @@ class Notes {
     _Note(color: Colors.deepPurple[700]!, name: 'note6.wav'),
     _Note(color: Colors.deepPurple[900]!, name: 'note7.wav'),
   ];
+
+  static final soundBars = Notes.notes.map(
+    (note) {
+      return Expanded(
+        child: SoundBar(
+          color: note.color,
+          noteName: note.name,
+        ),
+      );
+    },
+  ).toList();
 }
 
 class _Note {
