@@ -19,7 +19,7 @@ class SoundBar extends StatelessWidget {
       onTap: () {
         player.play(noteName);
       },
-      child: Container(
+      child: SizedBox(
         color: color,
       ),
     );
