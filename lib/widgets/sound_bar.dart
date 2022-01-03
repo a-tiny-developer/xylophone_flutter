@@ -11,11 +11,12 @@ class SoundBar extends StatelessWidget {
   final Color color;
   final String noteName;
 
+  static final AudioCache player = AudioCache();
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        final player = AudioCache();
         player.play(noteName);
       },
       child: Container(
